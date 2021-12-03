@@ -1,10 +1,12 @@
 # terraform-aws-vpc
-Terraform AWS vpc Module
+Terraform AWS vpc Module for Netscaler only
+
+
 
 
 -->
 
-Terraform module to provision AWS [`vpc`]
+Terraform module to provision AWS [`vpc for netscaler`]
 
 
 
@@ -14,6 +16,7 @@ The module will create:
 
 * vpc Instance
 * subnets
+* both public subnets will be in same AZ
 * route table
 * route
 * nat-gateway
@@ -62,6 +65,6 @@ locals {
 
 
 terraform {
-  # source = "git::https://git@github.com/ucopacme/terraform-aws-vpc-netscaler/standard-its-vpc//"
+  source = "git::git@github.com:ucopacme/terraform-aws-vpc-netscaler.git//standard-its-vpc//?ref=v0.0.1"
   
 }
